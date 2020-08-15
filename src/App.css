@@ -1,0 +1,120 @@
+
+.bg {
+  background-image: radial-gradient(circle, #8ec25e, #71974f, #566f40, #3c4830, #232521);
+  height: 100vh;
+}
+
+.bg-light {
+  height: 100vh;
+}
+
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.logo img {
+  width: 10rem;
+}
+
+.card {
+  margin: 10px 10px;
+}
+
+.card img{
+  height: 20rem;
+}
+
+/* Flip Cards CSS */
+.card-container {
+  display: inline-block;
+  height: 20px;
+}
+
+.card-flip {
+  display: grid;
+  grid-template: 1fr / 1fr;
+  grid-template-areas: "frontAndBack";
+  transform-style: preserve-3d;
+  transition: all 0.5s ease-in-out;
+  height: 20px;
+}
+
+.card-flip div {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.front {
+  grid-area: frontAndBack;
+}
+
+.back {
+  grid-area: frontAndBack;
+  transform: rotateY(-180deg);
+}
+
+.card-container:hover .card-flip {
+  transform: rotateY(180deg);
+}
+
+.bg-back {
+  background: rgb(250, 252, 247);
+  color: #003800;
+}
+
+p {
+  margin-bottom: .4rem;
+}
+
+.page-link {
+  color: #28a745;
+  border-color: #28a745;
+}
+
+.page-link:hover {
+  background: #28a745;
+  color: #fff;
+  border-color: #28a745;
+}
+
+@media only screen and (max-width: 480px) {
+  .card {
+    height: 10rem;
+    margin-top: 3rem;
+  }
+  
+  .card img, .back{
+    height: 12rem;
+  }
+
+  p {
+    margin-bottom: .1rem;
+    font-size: small;
+    
+  }
+  .p-5 {
+    padding: 1rem !important;
+  }
+
+  .quote-section .card {
+    height: 38vh;
+  }
+
+  h5 {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .pagination {
+    padding-top: 2rem;
+    margin: -.1rem 0 -2.5rem;
+  }
+
+  .justify-content-end {
+    justify-content: center !important;
+  }
+
+  
+}
