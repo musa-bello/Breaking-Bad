@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 class Pagination extends Component {
     render() {
-        const {itemsPerPage, totalItems, paginate, nextPage, prevPage} = this.props
+        const { itemsPerPage, totalItems, paginate } = this.props
         const pageNumbers = []
         for (let i = 1; i < Math.ceil(totalItems/itemsPerPage); i++) {
             pageNumbers.push(i)
